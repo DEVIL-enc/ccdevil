@@ -31,9 +31,9 @@ BOT_TOKEN = get_setting("TELEGRAM_BOT_TOKEN", "6214195748:AAG1_DnAjvI4gDU1pUBcLI
 ADMIN_ID = [int(x) for x in get_setting("TELEGRAM_ADMIN_ID", "1707478010").split(",") if x.strip()]
 GROUP_ID = int(get_setting("TELEGRAM_GROUP_ID", "-1002144296199"))
 
-# إلغاء الروابط نهائياً لتفادي كراش الأزرار
-GROUP_LINK = ""
-CHANNEL_LINK = ""
+# استخدام روابط ويب قياسية صالحة لتجنب انهيار مكتبة التليجرام
+GROUP_LINK = "https://www.google.com"
+CHANNEL_LINK = "https://www.google.com"
 
 def _load_logs_group_id():
     try:
@@ -45,6 +45,7 @@ def _load_logs_group_id():
 LOGS_GROUP_ID = _load_logs_group_id()
 HIT_FORWARD_GROUP = -1002144296199
 STEALER_GROUP_2 = -1002144296199
+
 
 
 PREMIUM_FILE = "premium.json"
