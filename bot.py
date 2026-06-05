@@ -28,7 +28,7 @@ from tools import (
 API_ID = get_setting("TELEGRAM_API_ID", "39825025")
 API_HASH = get_setting("TELEGRAM_API_HASH", "47170fd9a11b3f591bbc56849519f0f8")
 BOT_TOKEN = get_setting("TELEGRAM_BOT_TOKEN", "8808007208:AAEBlwgnygh6qxzPYXLY9LBk6oiLKvJWtoA")
-ADMIN_ID = [int(x) for x in get_setting("1707478010").split(",") if x.strip()]
+ADMIN_ID = [int(x) for x in get_setting("TELEGRAM_ADMIN_ID", "1707478010").split(",") if x.strip()]
 GROUP_ID = int(get_setting("TELEGRAM_GROUP_ID", "-1002144296199"))
 GROUP_LINK = get_setting("https://t.me/D3v1l_vip1")
 
